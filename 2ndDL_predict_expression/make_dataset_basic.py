@@ -47,6 +47,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--raw_data_root', default='raw_data', type=str, help='path to gene data root.')
     parser.add_argument('--dataset_root', default='gene_dataset', type=str, help='path to dataset root used for training.')
+    parser.add_argument('--length', default='20', type=int, help='data length or bin numbers (int)')
     args = parser.parse_args()
 
     inp(args.dataset_root)
@@ -60,7 +61,7 @@ if __name__ == "__main__":
     print('')
     print('Extracting valid gene that has no missing values.')
     for i, gene_data_path in tqdm(enumerate(gene_data_paths)):
-        df = pd.read_csv(gene_data_path, delimiter='\t', index_col=0, usecols=list(range(21)))
+        df = pd.read_csv(gene_data_path, delimiter='\t', index_col=0, usecols=list(range(int(args.length)+1)))
         df = df.dropna()
         gene_names = set(df.index)
         if i == 0:
@@ -90,7 +91,7 @@ if __name__ == "__main__":
     print('')
     print('Writing dataset files.')
     for gene_data_path in tqdm(gene_data_paths):
-        df = pd.read_csv(gene_data_path, delimiter='\t', index_col=0, usecols=list(range(21)))
+        df = pd.read_csv(gene_data_path, delimiter='\t', index_col=0, usecols=list(range(int(args.length)+1)))
         
         for gene_name in valid_names:
             file_path = glob(os.path.join(DATASET_ROOT, '*', gene_name+'.txt'))[0]
