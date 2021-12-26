@@ -133,6 +133,7 @@ This step requires “jupyter notebook”, handling “ipynb” format
 `GuidedBackProp_CisDecode_batch.ipynb` 
 (need “visualizations_forCisDecode.py” and “helper_forCisDecode2.py” in the same directory.) 
 Open jupyter, and run the ipynb file. 
+
 NOTE: At the third cell given below, we may have to repeat runs of this cell until the “dense” name is properly changed (expect 4-times) 
 
     partial_model = Model(
