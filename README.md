@@ -127,7 +127,7 @@ Use “2ndDL_predict_expression” directory.
     Output trained h5 file, list for prediction confidence in validation datasets, ROC-AUC value and curve, and confusion matrix. 
 
 ### (iii) Feature visualization by Guided Backpropagation (other methods are also applicable) 
-Use “Backpropagation” directory. 
+ - Use “Backpropagation” directory. 
 This step requires “jupyter notebook”, handling “ipynb” format 
 #### (iii-1) Feature visualization in the 2nd DL framework: expr pattern -> CREs 
  - `GuidedBackProp_CisDecode_batch.ipynb` 
@@ -136,12 +136,12 @@ Open jupyter, and run the ipynb file.
 
  - NOTE: At the third cell given below, we may have to repeat runs of this cell until the “dense” name is properly changed (expect 4-times) 
 
-    partial_model = Model(
-        inputs=model.inputs,
-        outputs=iutils.keras.graph.pre_softmax_tensors(model.outputs),
-        name=model.name,
-    )
-    partial_model.summary()
+        partial_model = Model(
+            inputs=model.inputs,
+            outputs=iutils.keras.graph.pre_softmax_tensors(model.outputs),
+            name=model.name,
+        )
+        partial_model.summary()
 
  - Need the trained prediction model “XXX.h5”, and “YYY.npy” for the objective genes, which have been made in the “make_dataset.py” section in the section (ii) above. 
 
