@@ -67,7 +67,7 @@ If you target 31-bp tiles, save as .txt like,
 
     -b 3 -t 0.8 produces 
 
-        geneA	1	0	1
+        geneA	1   0   1
 
 ### 8(ii). Deep learning for binary classification of expression patterns 
 
