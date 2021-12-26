@@ -69,62 +69,62 @@ If you target 31-bp tiles, save as .txt like,
 
         geneA	1   0   1
 
-### 8(ii). Deep learning for binary classification of expression patterns 
+### (ii). Deep learning for binary classification of expression patterns 
 
-Use “2ndDL_predict_expression” directory. 
+ - Use “2ndDL_predict_expression” directory. 
 
-1. Move all of the data including transitions of the predicted TF-binding sites for all target promoters, into “raw_data”. 
+    1. Move all of the data including transitions of the predicted TF-binding sites for all target promoters, into “raw_data”. 
 
-2. `python make_dataset.py (--raw_data_root [directory including data]) `
-    
-    &rarr; Output compiled data (train_00/, train_01/…) into /gene_dataset 
-
-3. Make target binary expression pattern” (with the identical OTU names). 
-
-    <u>target binary expression pattern file (with a specific name) is like (tab-delimited), </u>
-
-        geneA	0 
-        geneB	1 
-        geneC	0 
-        geneD	0 
-        geneE	1 
-
-    Now, the file/code structure is like, 
-
-        /root 
-        ├ 1dCNN_CisDecoding_training_basic.py 
-        ├ data_utils/generator.py 
-        ├ make_dataset.py 
-        ├ gene_dataset/ 
-        │       ├ train_00/ 
-        │       │   ├ >XXX.npy 
-        │       │   ├ >YYY.npy 
-        │       │   ⋮ 
-        │       │   └ >ZZZ.npy 
-        │       ├ train_01/ 
-        │       ├ train_02/ 
-        │       ⋮ 
-        │       └ train_09/ 
-        │     
-        ├ binary_expr_pattern file (a specific name) 
-        ├ cnn_models/cnn_model_bisic.py 
-    
-4. `python 1dCNN_CisDecoding_training_basic.py [--n_channel] [--data_length] [--batch_size] [--epochs] [--val_rate] [--shuffle] [--class_weight] [--target_file] [--learning_rate] [--out_file] [--prediction_file]` 
-
-        option:
-            --n_channel', default=50, help='number of channels.' 
-            --data_length', default=20, help='length of sequence.' 
-            --batch_size', default=156, help='batch size for training.' 
-            --epochs', default=10, help='number of epochs for training.' 
-            --val_rate', default=0.3, help='rate of validation data.' 
-            --shuffle', default=True, help='phenotype data training shuffle' 
-            --class_weight', default=5, help='class-weight or positive sample imbalance rate' 
-            --target_file', default='BRup.txt', help='phenotype data file' 
-            --learning_rate', default=0.0001, help='learning rate' 
-            --out_file', default='model.h5', help='output model file name' 
-            --prediction_file', default='prediction.txt', help='output prediction confidence file name' 
+    2. `python make_dataset.py (--raw_data_root [directory including data]) `
         
-    &rarr; Output trained h5 file, list for prediction confidence in validation datasets, ROC-AUC value and curve, and confusion matrix. 
+        &rarr; Output compiled data (train_00/, train_01/…) into /gene_dataset 
+
+    3. Make target binary expression pattern” (with the identical OTU names). 
+
+        <u>target binary expression pattern file (with a specific name) is like (tab-delimited), </u>
+
+            geneA	0 
+            geneB	1 
+            geneC	0 
+            geneD	0 
+            geneE	1 
+
+        Now, the file/code structure is like, 
+
+            /root 
+            ├ 1dCNN_CisDecoding_training_basic.py 
+            ├ data_utils/generator.py 
+            ├ make_dataset.py 
+            ├ gene_dataset/ 
+            │       ├ train_00/ 
+            │       │   ├ >XXX.npy 
+            │       │   ├ >YYY.npy 
+            │       │   ⋮ 
+            │       │   └ >ZZZ.npy 
+            │       ├ train_01/ 
+            │       ├ train_02/ 
+            │       ⋮ 
+            │       └ train_09/ 
+            │     
+            ├ binary_expr_pattern file (a specific name) 
+            ├ cnn_models/cnn_model_bisic.py 
+        
+    4. `python 1dCNN_CisDecoding_training_basic.py [--n_channel] [--data_length] [--batch_size] [--epochs] [--val_rate] [--shuffle] [--class_weight] [--target_file] [--learning_rate] [--out_file] [--prediction_file]` 
+
+            option:
+                --n_channel', default=50, help='number of channels.' 
+                --data_length', default=20, help='length of sequence.' 
+                --batch_size', default=156, help='batch size for training.' 
+                --epochs', default=10, help='number of epochs for training.' 
+                --val_rate', default=0.3, help='rate of validation data.' 
+                --shuffle', default=True, help='phenotype data training shuffle' 
+                --class_weight', default=5, help='class-weight or positive sample imbalance rate' 
+                --target_file', default='BRup.txt', help='phenotype data file' 
+                --learning_rate', default=0.0001, help='learning rate' 
+                --out_file', default='model.h5', help='output model file name' 
+                --prediction_file', default='prediction.txt', help='output prediction confidence file name' 
+            
+        &rarr; Output trained h5 file, list for prediction confidence in validation datasets, ROC-AUC value and curve, and confusion matrix. 
 
 ### (iii) Feature visualization by Guided Backpropagation (other methods are also applicable) 
  - Use “Backpropagation” directory. 
