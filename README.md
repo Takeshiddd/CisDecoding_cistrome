@@ -79,7 +79,7 @@ Use “2ndDL_predict_expression” directory.
     
     &rarr; Output compiled data (train_00/, train_01/…) into /gene_dataset 
 
-6. Make target binary expression pattern” (with the identical OTU names). 
+3. Make target binary expression pattern” (with the identical OTU names). 
 
     <u>target binary expression pattern file (with a specific name) is like (tab-delimited), </u>
 
@@ -109,7 +109,7 @@ Use “2ndDL_predict_expression” directory.
         ├ binary_expr_pattern file (a specific name) 
         ├ cnn_models/cnn_model_bisic.py 
     
-7. `python 1dCNN_CisDecoding_training_basic.py [--n_channel] [--data_length] [--batch_size] [--epochs] [--val_rate] [--shuffle] [--class_weight] [--target_file] [--learning_rate] [--out_file] [--prediction_file]` 
+4. `python 1dCNN_CisDecoding_training_basic.py [--n_channel] [--data_length] [--batch_size] [--epochs] [--val_rate] [--shuffle] [--class_weight] [--target_file] [--learning_rate] [--out_file] [--prediction_file]` 
 
         option:
             --n_channel', default=50, help='number of channels.' 
@@ -127,20 +127,13 @@ Use “2ndDL_predict_expression” directory.
     Output trained h5 file, list for prediction confidence in validation datasets, ROC-AUC value and curve, and confusion matrix. 
 
 ### (iii) Feature visualization by Guided Backpropagation (other methods are also applicable) 
-
 Use “Backpropagation” directory. 
-
 This step requires “jupyter notebook”, handling “ipynb” format 
-
 #### (iii-1) Feature visualization in the 2nd DL framework: expr pattern -> CREs 
 `GuidedBackProp_CisDecode_batch.ipynb` 
-
 (need “visualizations_forCisDecode.py” and “helper_forCisDecode2.py” in the same directory.) 
-
 Open jupyter, and run the ipynb file. 
-
 NOTE: At the third cell given below, we may have to repeat runs of this cell until the “dense” name is properly changed (expect 4-times) 
-
 
     partial_model = Model(
         inputs=model.inputs,
