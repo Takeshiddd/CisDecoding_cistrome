@@ -130,11 +130,11 @@ Use “2ndDL_predict_expression” directory.
 Use “Backpropagation” directory. 
 This step requires “jupyter notebook”, handling “ipynb” format 
 #### (iii-1) Feature visualization in the 2nd DL framework: expr pattern -> CREs 
-`GuidedBackProp_CisDecode_batch.ipynb` 
+ - `GuidedBackProp_CisDecode_batch.ipynb` 
 (need “visualizations_forCisDecode.py” and “helper_forCisDecode2.py” in the same directory.) 
 Open jupyter, and run the ipynb file. 
 
-NOTE: At the third cell given below, we may have to repeat runs of this cell until the “dense” name is properly changed (expect 4-times) 
+ - NOTE: At the third cell given below, we may have to repeat runs of this cell until the “dense” name is properly changed (expect 4-times) 
 
     partial_model = Model(
         inputs=model.inputs,
@@ -143,9 +143,9 @@ NOTE: At the third cell given below, we may have to repeat runs of this cell unt
     )
     partial_model.summary()
 
-Need the trained prediction model “XXX.h5”, and “YYY.npy” for the objective genes, which have been made in the “make_dataset.py” section in the section (ii) above. 
+ - Need the trained prediction model “XXX.h5”, and “YYY.npy” for the objective genes, which have been made in the “make_dataset.py” section in the section (ii) above. 
 
-The objective gene files (in npy format) need to be located on “select_GBP” directory. 
+ - The objective gene files (in npy format) need to be located on “select_GBP” directory. 
 
 
 #### (iii-2). Feature visualization in the 1st DL framework: high confidence CREs -> nucleotide residues 
