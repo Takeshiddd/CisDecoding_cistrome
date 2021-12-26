@@ -124,7 +124,7 @@ Use “2ndDL_predict_expression” directory.
             --out_file', default='model.h5', help='output model file name' 
             --prediction_file', default='prediction.txt', help='output prediction confidence file name' 
         
-    Output trained h5 file, list for prediction confidence in validation datasets, ROC-AUC value and curve, and confusion matrix. 
+    &rarr; Output trained h5 file, list for prediction confidence in validation datasets, ROC-AUC value and curve, and confusion matrix. 
 
 ### (iii) Feature visualization by Guided Backpropagation (other methods are also applicable) 
  - Use “Backpropagation” directory. 
