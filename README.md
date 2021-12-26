@@ -150,9 +150,8 @@ Open jupyter, and run the ipynb file.
 
 #### (iii-2). Feature visualization in the 1st DL framework: high confidence CREs -> nucleotide residues 
 
-`GuidedBackprop_CREs-prediction.ipynb`
-
+ - `GuidedBackprop_CREs-prediction.ipynb`
 (need “visualizations_forCisDecode.py” and “helper_forCisDecode2” in the same directory.) 
 
-Need a prediction model “ZZZ.h5” for each TF channel, which has been made in the section (i), and “fragments list” for the objective tiles, which would be made from a promoter sequence. 
+ - Need a prediction model “ZZZ.h5” for each TF channel, which has been made in the section (i), and “fragments list” for the objective tiles, which would be made from a promoter sequence. 
 
