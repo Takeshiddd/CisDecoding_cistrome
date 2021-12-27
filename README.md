@@ -5,9 +5,9 @@
 
 (i). [Training of TFs recognition patterns from cistrome datasets [on directory “1stDL_predict_CREs”]](#i-training-of-tfs-recognition-patterns-from-dap-seq)
 
-(ii). Deep learning for binary classification of expression patterns [on directory “2ndDL_predict_expression”] 
+(ii). [Deep learning for binary classification of expression patterns [on directory “2ndDL_predict_expression”]](#ii-deep-learning-for-binary-classification-of-expression patterns)
 
-(iii). Feature visualization [on directory “Backpropagation”]
+(iii). [Feature visualization [on directory “Backpropagation”]](#iii-feature-visualization-by-guided-backpropagation-other-methods-are-also-applicable))
 
 
 ### (i). Training of TFs recognition patterns from DAP-Seq 
