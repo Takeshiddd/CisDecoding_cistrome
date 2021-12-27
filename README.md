@@ -1,6 +1,5 @@
 # Deep learning on cis-decoding with cistrome datasets 
-## Model Architecture
-![Test Image 1](./figure/model_arc.png)
+![Model Architecture](./figure/model_arc.png)
 
 ## STRUCTURE 
 
