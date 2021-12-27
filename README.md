@@ -1,9 +1,10 @@
 # Deep learning on cis-decoding with cistrome datasets 
-
+## Model Architecture
+![Test Image 1](./figure/model_arc.png)
 
 ## STRUCTURE 
 
-(i). [Training of TFs recognition patterns from cistrome datasets [on directory “1stDL_predict_CREs”]](i-training-of-tfs-recognition-patterns-from-dap-seq)
+(i). Training of TFs recognition patterns from cistrome datasets [on directory “1stDL_predict_CREs”]
 
 (ii). Deep learning for binary classification of expression patterns [on directory “2ndDL_predict_expression”] 
 
