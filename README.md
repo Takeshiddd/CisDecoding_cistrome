@@ -68,7 +68,6 @@ If you target 31-bp tiles, save as .txt like,
 
 ### (ii). Deep learning for binary classification of expression patterns 
 ![Model Architecture](figure/model_arc.png)
-
  - Use “2ndDL_predict_expression” directory. 
 
 1. Move all of the data including transitions of the predicted TF-binding sites for all target promoters, into “raw_data”. 
