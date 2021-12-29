@@ -1,5 +1,5 @@
 # Deep learning on cis-decoding with cistrome datasets 
-![Model Architecture](./figure/model_arc.png)
+![cis-decoding](./figure/cisDecoding.png)
 
 ## STRUCTURE 
 
@@ -67,6 +67,7 @@ If you target 31-bp tiles, save as .txt like,
         geneA	1   0   1
 
 ### (ii). Deep learning for binary classification of expression patterns 
+![Model Architecture](figure/model_arc.png)
 
  - Use “2ndDL_predict_expression” directory. 
 
