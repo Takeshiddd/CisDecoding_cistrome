@@ -1,6 +1,8 @@
 # Deep learning on cis-decoding with cistrome datasets 
 ![cis-decoding](./figure/cisDecoding.png)
 
+This is Keras and Tensorflow implementation. Pytorch imprementatin is [here](https://github.com/matsuo-shinnosuke/cis-decoding).
+
 ## STRUCTURE 
 
 (i). [Training of TFs recognition patterns from cistrome datasets [on directory “1stDL_predict_CREs”]](#i-training-of-tfs-recognition-patterns-from-dap-seq)
